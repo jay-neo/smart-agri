@@ -1,0 +1,70 @@
+form {
+    padding: 20px;
+}
+
+.contact-form {
+    background-image: linear-gradient(to bottom, #f3f3f3, #ebedf1, #e0e8ed, #d3e4e6, #cadfdb, #cbe0dc, #cce1dd, #cde2de, #d9e9eb, #e7f0f4, #f5f7fa, #ffffff);
+}
+
+
+.input-box {
+    max-width: 600px;
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+.title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.content {
+    margin-top: 20px;
+}
+
+.input-box {
+    margin-bottom: 20px;
+}
+
+.details {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea,
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.contact-btn input[type="submit"] {
+    padding: 10px 20px;
+    background-color: #9013cf;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.contact-btn input:hover{
+    background-color: #45db34;
+    color: #000000;
+}
+
+@media screen and (max-width: 600px) {
+    .input-box {
+        margin: 20px;
+    }
+}

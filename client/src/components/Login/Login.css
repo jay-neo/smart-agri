@@ -1,0 +1,50 @@
+/* Styling for the login form wrapper */
+.login-popup {
+    position: relative;
+    cursor: default;
+}
+
+.login-popup h3 {
+    font-size: min(2.5vw, 2.2vh)
+}
+
+.login-btn {
+    padding: 0.4rem;
+    font-size: 1rem;
+    border-radius: 0.5rem black;
+    color: var(--black);
+    cursor: pointer;
+    background: none;
+}
+/* 
+.login-btn :hover {
+    background: var(--orange);
+} */
+
+/* Styling for the login form */
+.login-form {
+    display: none;
+    position: absolute;
+    transform: translateX(-50%);
+    background: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    color: black;
+    cursor: none;
+    width: min(30em, 30vh);
+}
+
+.login-input {
+    margin-bottom: 10px;
+    width: min(20em, 20vh);
+    padding: 8px;
+    box-sizing: border-box;
+    font-weight: bold;
+    height: 20px;
+}
+
+/* Styling for the hover effect */
+.login-popup:hover .login-form {
+    display: block;
+}

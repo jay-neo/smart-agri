@@ -1,0 +1,36 @@
+* {
+    margin: 0;
+    padding: 0;
+    /* box-sizing: border-box; */
+    align-content: center;
+    text-align: center;
+}
+
+.footer {
+    background-color: #19a042;
+    color: rgb(255, 255, 255);
+    /* width: 100%; */
+    /* height: min(8vh, 20vw); */
+    padding: 0 1em;
+
+}
+
+.footer ul {
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+    list-style: none;
+}
+
+.footer a {
+    font-size: min(2vw, 2vh);
+    color: inherit;
+    margin: 10px;
+    text-decoration: none;
+    /* height: 100%; */
+}
+
+.footer p {
+    margin: 5px 0 10px 0;
+    font-size: min(2vw, 2vh);
+}
