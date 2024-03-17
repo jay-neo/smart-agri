@@ -13,7 +13,7 @@ const Footer = () => {
           <li><Link to="/about">About Us</Link></li>|
           <li><Link to="/help">Help</Link></li>
         </ul>
-        <p>This website belongs to Smart Agri-AI Project <br />Copyright ©2023, Inc. All rights reserved.</p><br/>
+        <p>This website belongs to Smart Agri-AI Project <br />Copyright ©{new Date().getFullYear()}, Inc. All rights reserved.</p><br />
       </div>
     </>
   )

@@ -1,0 +1,26 @@
+.json-table {
+    padding: 0 20vw;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.json-table th, .json-table td {
+    border: 1px solid #dddddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.json-table th {
+    background-color: #f2f2f2;
+}
+
+.sync-button {
+    /* padding: 8px; */
+    background-color: #4c7faf;
+    color: white;
+    border: none;
+    cursor: pointer;
+    width: 10%;
+    text-align: center;
+    border-radius: 5px;
+  }

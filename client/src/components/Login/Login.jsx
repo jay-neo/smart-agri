@@ -1,14 +1,15 @@
 import React, { useState } from 'react';
 import "./Login.css"
 import api from '~/api';
-import Notification from '../Notification/Notification';
+import Popup from 'reactjs-popup';
 
-const App = () => {
 
-  const [notification, setNotification] = useState({ type: '', message: '' });
+const Login = () => {
 
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [loginError, setLoginError] = useState('Enter your email here');
+
 
   const handleEmail = (e) => {
     setEmail(e.target.value);
@@ -18,58 +19,75 @@ const App = () => {
     setPassword(e.target.value);
   };
 
-
   const isSubmitDisabled = (!email || !password);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
       await api.post('/login', { email, password });
+      window.location.reload();
     } catch (error) {
-      setNotification({ type: 'res-err', message: error });
-      setEmail('');
+      setEmail('')
       setPassword('');
+      setLoginError(error.response ? error.response.data.message : "Server Error");
     }
-    window.location.reload();
   }
 
   return (
     <>
-      <Notification type={notification.type} message={notification.message} />
-      <div className="login-popup">
-        <h3>Log in</h3>
-        <form className="login-form" onSubmit={handleSubmit}>
+      <Popup
+        trigger={<button className="button">Login</button>}
+        modal
+        nested
+      >
+        {close => (
+          <div className="modal">
 
-          <label htmlFor="username">Email</label>
-          <input
-            type="email"
-            id="email"
-            className="login-input"
-            value={email}
-            onChange={handleEmail}
-          />
+            <div className="content">
+              <form className="login-form" onSubmit={handleSubmit}>
+                <label htmlFor="email">Email</label>
+                <input
+                  type="email"
+                  id="email"
+                  className="login-input"
+                  placeholder={loginError}
+                  value={email}
+                  onChange={handleEmail}
+                  required
+                />
 
-          <label htmlFor="password">Password</label>
-          <input
-            type="password"
-            id="password"
-            className="login-input"
-            value={password}
-            onChange={handlePassword}
-          />
+                <label htmlFor="password">Password</label>
+                <input
+                  type="password"
+                  id="password"
+                  className="login-input"
+                  value={password}
+                  onChange={handlePassword}
+                  required
+                />
 
-          <button
-            className='login-btn'
-            type="submit"
-            disabled={isSubmitDisabled}
-            style={isSubmitDisabled ?
-              { backgroundColor: '#007bff', color: 'white', cursor: 'default' }
-              : {}
-            }>Login</button>
-        </form>
-      </div>
+                <button
+                  className="login-btn"
+                  type="submit"
+                  disabled={isSubmitDisabled}
+                  style={isSubmitDisabled ?
+                    { backgroundColor: '#007bff', color: 'white', cursor: 'default' }
+                    : {}
+                  }
+                >
+                  Login
+                </button>
+              </form>
+            </div>
+
+
+          </div>
+        )}
+      </Popup>
+
+
     </>
   );
 };
 
-export default App;
+export default Login;

@@ -6,6 +6,7 @@ import MainPage from "../pages/MainPage/MainPage.jsx";
 
 
 import SignInPage from "../pages/SigninPage/SigninPage.jsx";
+import ProfilePage from "../pages/ProfilePage/ProfilePage.jsx";
 import ProgramsPage from "../pages/ProgramsPage/ProgramsPage.jsx";
 
 
@@ -41,6 +42,7 @@ const AppRoutes = () => (
 
         <Route path="/programs" element={<ProgramsPage />} />
         <Route path="/signin" element={<SignInPage/>} />
+        <Route path="/user/:uid" element={<ProfilePage/>} />
 
 
         <Route path="/crop-management" element={<CropManagement/>} />

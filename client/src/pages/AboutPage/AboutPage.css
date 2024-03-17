@@ -1,0 +1,23 @@
+.about-container {
+    padding: 20px;
+    text-align: justify;
+    justify-content: center;
+    min-height: 80vh;
+  }
+  
+  .about-heading {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  .about-subheading {
+    font-size: 1.5rem;
+    margin-top: 40px;
+    margin-bottom: 10px;
+  }
+  
+  .about-text {
+    margin-bottom: 20px;
+    padding: 0 20vw ;
+  }
+  

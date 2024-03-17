@@ -5,7 +5,10 @@ import NavBar from '../../components/Navbar/Navbar'
 import Footer from '../../components/Footer/Footer'
 
 
+
+
 function HomePage() {
+
     return (
         <>
             <NavBar />
@@ -33,7 +36,8 @@ function HomePage() {
                 </div>
 
                 <div className="center-content">
-                    <img src="../src/assets/tree.png" alt="img" />
+                    {/* <img src="../src/assets/tree.png" alt="img" /> */}
+                    <img src="https://www.transparentpng.com/thumb/tree/trees-png-photo-2.png" alt="img" />
                 </div>
 
                 <div className="right-content">

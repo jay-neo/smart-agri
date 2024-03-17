@@ -7,7 +7,9 @@ function ProgramsPage() {
     return (
         <div>
             <NavBar />
-            <h1 align="center">Programs & Schemes</h1>
+            <div style={{ flexDirection: 'column', justifyContent: 'center', alignItems: 'center', minHeight: '80vh', padding: '20px' }}>
+                <h1 style={{ textAlign: 'center' }}>ERROR: Government API could not be found.</h1>
+            </div>
             <Footer />
         </div>
     )

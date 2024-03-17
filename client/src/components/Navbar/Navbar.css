@@ -62,3 +62,47 @@
   transform: scale3d(1.02,1.04,1.1);
   cursor: none;
 }
+
+.auth {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 10px;
+}
+
+.auth ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+
+.auth li {
+  margin-right: 10px;
+}
+
+.auth b {
+  margin: 0 5px;
+}
+
+.auth button,
+.auth a {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  border-radius: 10px;
+}
+
+
+.auth button:hover,
+.auth a:hover {
+  background-color: #45a049;
+}
