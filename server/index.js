@@ -34,7 +34,6 @@ app.use(express.urlencoded({ extended: false }));
 
 
 
-app.use(require("./routes/record"));
 app.use(require("./routes/user"));
 app.use(require("./routes/user-thingspeak"));
 
